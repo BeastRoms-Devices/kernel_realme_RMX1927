@@ -108,16 +108,10 @@ obj-$(CONFIG_TOUCHSCREEN_ROHM_BU21023)	+= rohm_bu21023.o
 obj-$(CONFIG_TOUCHSCREEN_ST)		+= st/
 obj-$(CONFIG_TOUCHSCREEN_HIMAX_CHIPSET)	+= hxchipset/
 obj-$(CONFIG_TOUCHSCREEN_SYNAPTICS_TCM)	+= synaptics_tcm/
-#ifdef VENDOR_EDIT
-#/* Ping.Zhang@BSP.TP, 2019-03-16, Add for common touchpanel driver */
-#obj-$(CONFIG_TOUCHPANEL_OPPO) += oppo_touchscreen/
-#obj-$(CONFIG_TOUCHPANEL_OPPO) += touch.o
-#endif /* VENDOR_EDIT */
-ifeq ($(CONFIG_ODM_WT_EDIT),y)
+
 obj-$(CONFIG_TOUCHSCREEN_ILI9881H)	 += ili9881h/
 obj-$(CONFIG_INPUT_TOUCHSCREEN)      += headset_notifier.o
 obj-$(CONFIG_INPUT_TOUCHSCREEN)      += usb_notifier.o
 obj-$(CONFIG_INPUT_TOUCHSCREEN)      += update_tpfw_notifier.o
 obj-$(CONFIG_INPUT_TOUCHSCREEN)      += tpd_summer.o
 obj-$(CONFIG_TOUCHSCREEN_NT36525B)	 += NT36525B/
-endif

@@ -1299,10 +1299,5 @@ config TOUCHSCREEN_ILI9881H
 	  If unsure, say N.
 
 source "drivers/input/touchscreen/ili9881h/Kconfig"
-#ifdef ODM_WT_EDIT
-#Bin.Su@ODM_WT.BSP.Touchscreen,2019/06/25,Add Litchi TP for RM begain
-source "drivers/input/touchscreen/ili9881h/Kconfig"
 source "drivers/input/touchscreen/NT36525B/Kconfig"
-#Bin.Su@ODM_WT.BSP.Touchscreen,2019/06/25,Add Litchi TP for RM end
-#endif
 endif
