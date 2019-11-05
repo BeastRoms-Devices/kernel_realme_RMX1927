@@ -150,12 +150,12 @@
 				/* active state */
 				mux {
 					/* 83: Enable 84: Firmware */
-					pins = "gpio83", "gpio84";
+					pins = "gpio83", "gpio84", "gpio82";
 					function = "gpio";
 				};
 
 				config {
-					pins = "gpio83", "gpio84";
+					pins = "gpio83", "gpio84", "gpio82";
 					drive-strength = <2>; /* 2 MA */
 					bias-pull-up;
 				};
@@ -165,12 +165,12 @@
 				/* sleep state */
 				mux {
 					/* 83: Enable 84: Firmware */
-					pins = "gpio83", "gpio84";
+					pins = "gpio83", "gpio84", "gpio82";
 					function = "gpio";
 				};
 
 				config {
-					pins = "gpio83", "gpio84";
+					pins = "gpio83", "gpio84", "gpio82";
 					drive-strength = <2>; /* 2 MA */
 					bias-disable;
 				};

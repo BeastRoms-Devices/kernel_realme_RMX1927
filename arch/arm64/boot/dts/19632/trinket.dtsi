@@ -436,7 +436,7 @@
 					//dev = "/dev/block/platform/soc/4744000.sdhci/by-name/vendor";
 					//#endif
 					type = "ext4";                         
-                                        mnt_flags = "ro,barrier=1,discard";                        
+                                        mnt_flags = "ro,barrier=1,async_discard";                        
 					//#ifndef VENDOR_EDIT
 					//#Yunqing.Zeng@BSP.Kernel.Driver, 2019/03/28, Modify for AB partition disable.
 					//fsmgr_flags = "wait,slotselect,avb";
@@ -561,9 +561,9 @@
 		};
 
 		adsp_mem: adsp_region {
-			compatible = "shared-dma-pool";
+			compatible = "removed-dma-pool";
 			alloc-ranges = <0 0x00000000 0 0xffffffff>;
-			reusable;
+			no-map;
 			alignment = <0 0x400000>;
 			size = <0 0x800000>;
 		};

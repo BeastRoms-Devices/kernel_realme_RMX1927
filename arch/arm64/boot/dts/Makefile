@@ -30,6 +30,8 @@
 dts-dirs += 19631
 dts-dirs += 19632
 dts-dirs += 19633
+dts-dirs += 19637
+dts-dirs += 19638
 # endif Hanqing.Wang@BSP.Kernel.Driver 2019/03/23 Modify for use 19631 target dts for kernel
 # endif
 
