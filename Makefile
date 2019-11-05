@@ -730,12 +730,7 @@ KBUILD_CFLAGS	+= $(call cc-disable-warning, format-truncation)
 KBUILD_CFLAGS	+= $(call cc-disable-warning, format-overflow)
 KBUILD_CFLAGS	+= $(call cc-disable-warning, int-in-bool-context)
 KBUILD_CFLAGS	+= $(call cc-disable-warning, attribute-alias)
-ifeq ($(ODM_WT_EDIT),yes)
-# Yajun.Zhang@ODM_WT.Performance.1941873, 2019/04/26, add for important debug config and controlled by WT_FINAL_RELEASE
-ifeq ($(WT_FINAL_RELEASE),yes)
-KBUILD_CFLAGS	+= $(call cc-disable-warning, array-bounds)
-endif # WT_FINAL_RELEASE
-endif # ODM_WT_EDIT
+
 ifdef CONFIG_CC_OPTIMIZE_FOR_SIZE
 KBUILD_CFLAGS	+= $(call cc-option,-Oz,-Os)
 KBUILD_CFLAGS	+= $(call cc-disable-warning,maybe-uninitialized,)
@@ -743,14 +738,7 @@ else
 ifdef CONFIG_PROFILE_ALL_BRANCHES
 KBUILD_CFLAGS	+= -O2 $(call cc-disable-warning,maybe-uninitialized,)
 else
-ifeq ($(ODM_WT_EDIT),yes)
-# Yajun.Zhang@ODM_WT.Performance.1941873, 2019/04/26, add for important debug config and controlled by WT_FINAL_RELEASE
-ifeq ($(WT_FINAL_RELEASE),yes)
-KBUILD_CFLAGS	+= -O2 $(call cc-disable-warning,maybe-uninitialized,)
-else
 KBUILD_CFLAGS   += -O2
-endif # WT_FINAL_RELEASE
-endif # ODM_WT_EDIT
 endif
 endif
 
